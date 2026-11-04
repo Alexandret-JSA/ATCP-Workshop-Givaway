@@ -72,8 +72,8 @@ a{color:inherit}
 /* checklists */
 .chk{display:flex;flex-direction:column;gap:10px}
 .chk li{position:relative;padding-left:30px;font-size:16px;line-height:1.45}
-.chk li::before{content:"✓";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;background:var(--charcoal);color:#fff}
-.chk.x li::before{content:"✕";background:transparent;color:currentColor;box-shadow:inset 0 0 0 1.5px currentColor;opacity:.75}
+.chk li::before{content:"â";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;background:var(--charcoal);color:#fff}
+.chk.x li::before{content:"â";background:transparent;color:currentColor;box-shadow:inset 0 0 0 1.5px currentColor;opacity:.75}
 
 /* top bar */
 .topbar{background:var(--green);color:#fff;padding:8px 0}
@@ -204,6 +204,46 @@ a{color:inherit}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
+
+<style data-overrides>
+/* #1 — center the stats banner */
+.band.green .wrap.grid.g4{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:flex-start;
+  gap:clamp(20px,4vw,56px);
+  text-align:center;
+}
+.band.green .stat{align-items:center;justify-content:center;text-align:center}
+
+/* #2 — sticky top form card on desktop (closing section) */
+@media (min-width:768px){
+  .closing .split{align-items:start}
+  .closing .split > .form-card{
+    position:sticky;
+    top:24px;
+    align-self:flex-start;
+  }
+}
+
+/* #3 — FAQ in two columns */
+.faq{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0 20px;
+  align-items:start;
+}
+.faq details:first-child{border-top:1px solid var(--line);border-radius:12px 12px 0 0}
+.faq details:last-child{border-radius:0 0 12px 12px}
+/* keep the accordion borders clean across the column break */
+.faq details{border-top:1px solid var(--line)}
+.faq details:nth-child(odd){border-radius:12px 12px 0 0}
+.faq details:nth-last-child(2):not(:last-child){border-radius:0 0 12px 12px}
+@media (max-width:767px){
+  .faq{grid-template-columns:minmax(0,1fr)}
+}
+</style>
 </head>
 <body>
 
@@ -225,9 +265,9 @@ a{color:inherit}
   <div class="wrap split">
     <div class="hero-card">
       <div class="logo-plate"><img src="assets/atcp-logo.webp" alt="ATCP: Association of Tree Care Professionals" width="188" height="95"></div>
-      <span class="pill">ATCP Tree Care MasterClass · Free Giveaway</span>
+      <span class="pill">ATCP Tree Care MasterClass Â· Free Giveaway</span>
       <h1 class="h1">Win 1-on-1 Coaching With a 7-Figure Tree Service Owner</h1>
-      <p class="p">Learn directly from the people who have already built the business you’re trying to build. No generic advice. No guessing. Four winners, a $1,000 session each, and $0 to enter.</p>
+      <p class="p">Learn directly from the people who have already built the business youâre trying to build. No generic advice. No guessing. Four winners, a $1,000 session each, and $0 to enter.</p>
       <div class="coachrow">
         <div class="faces" aria-hidden="true">
           <span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span>
@@ -235,8 +275,8 @@ a{color:inherit}
         <p class="micro">Coached by Joe Withledge, Stefano LeBlanc, Chad Hansen and Alex Shy</p>
       </div>
       <div class="logi">
-        <div><small>Entries close</small><span>Thu, Nov 12 · 5:00 PM ET</span></div>
-        <div><small>Winners drawn</small><span>Fri, Nov 13 · 5:00 PM ET</span></div>
+        <div><small>Entries close</small><span>Thu, Nov 12 Â· 5:00 PM ET</span></div>
+        <div><small>Winners drawn</small><span>Fri, Nov 13 Â· 5:00 PM ET</span></div>
         <div><small>Session</small><span>60-min 1-on-1 video call</span></div>
       </div>
     </div>
@@ -244,7 +284,7 @@ a{color:inherit}
       <h2 class="h3">Enter to Win Your 1-on-1 Session</h2>
       <span class="steps">Takes about 2 minutes</span>
       <iframe src="https://api.leadconnectorhq.com/widget/form/b0UxqgFYANiVRYIZicAG" id="inline-b0UxqgFYANiVRYIZicAG" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="ATCP MasterClass Giveaway" data-layout-iframe-id="inline-b0UxqgFYANiVRYIZicAG" data-form-id="b0UxqgFYANiVRYIZicAG" title="ATCP MasterClass Giveaway entry form"></iframe>
-      <p class="micro reassure">Free to enter · No purchase necessary · We never sell your information</p>
+      <p class="micro reassure">Free to enter Â· No purchase necessary Â· We never sell your information</p>
       <p class="p closed-msg">Entries are closed. The 4 winners are drawn live on Fri, Nov 13 at 5:00 PM ET during our Discord town hall.</p>
     </div>
   </div>
@@ -270,7 +310,7 @@ a{color:inherit}
       <p class="p">Bring the question that matters most to you, from growth and sales to operations, leadership, hiring and profitability.</p>
     </div>
     <div class="prize">
-      <p class="prize-head"><span>4 Winners</span><span class="sep"> · </span><span>4 Coaches</span></p>
+      <p class="prize-head"><span>4 Winners</span><span class="sep"> Â· </span><span>4 Coaches</span></p>
       <h3 class="h3">1-on-1 Tree Care MasterClass Session</h3>
       <ul class="chk">
         <li><b>Length:</b> 60 minutes, one-on-one</li>
@@ -290,15 +330,15 @@ a{color:inherit}
   <div class="wrap">
     <div class="stack c">
       <p class="eb">Your Coaches</p>
-      <h2 class="h2">Meet ATCP’s Top Board Members and Experts</h2>
+      <h2 class="h2">Meet ATCPâs Top Board Members and Experts</h2>
       <p class="p">Each one has built and operated a 7-figure tree service business. Now one of them could be in your corner.</p>
     </div>
     <div class="gap"></div>
     <div class="grid g4">
-      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Storm Response</span><h3 class="h3">Joe Withledge</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Storm response · Emergency work · Scaling</p></div></div>
-      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Storm Work &amp; Insurance Billing</span><h3 class="h3">Stefano LeBlanc</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Insurance billing · Storm work · Getting paid</p></div></div>
-      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Business Management &amp; Finance</span><h3 class="h3">Chad Hansen</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Pricing · Cash flow · Managing the business</p></div></div>
-      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">PHC &amp; Operational Efficiency</span><h3 class="h3">Alex Shy</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Plant health care · Systems · Crew efficiency</p></div></div>
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Storm Response</span><h3 class="h3">Joe Withledge</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Storm response Â· Emergency work Â· Scaling</p></div></div>
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Storm Work &amp; Insurance Billing</span><h3 class="h3">Stefano LeBlanc</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Insurance billing Â· Storm work Â· Getting paid</p></div></div>
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Business Management &amp; Finance</span><h3 class="h3">Chad Hansen</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Pricing Â· Cash flow Â· Managing the business</p></div></div>
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">PHC &amp; Operational Efficiency</span><h3 class="h3">Alex Shy</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Plant health care Â· Systems Â· Crew efficiency</p></div></div>
     </div>
     <div class="gap"></div>
     <div class="cta">
@@ -364,7 +404,7 @@ a{color:inherit}
 <section class="band white-l">
   <div class="wrap grid g2">
     <div class="card yes">
-      <h3 class="h3">This Is for You If…</h3>
+      <h3 class="h3">This Is for You Ifâ¦</h3>
       <ul class="chk">
         <li>You work in tree care: owner, employee, contractor, climber or crew lead.</li>
         <li>You want to grow a tree business, or start your own.</li>
@@ -373,11 +413,11 @@ a{color:inherit}
       </ul>
     </div>
     <div class="card no">
-      <h3 class="h3">This Is Not for You If…</h3>
+      <h3 class="h3">This Is Not for You Ifâ¦</h3>
       <ul class="chk x">
-        <li>You’re looking for someone to do the work for you.</li>
-        <li>You don’t work in the tree care industry.</li>
-        <li>You can’t join a video call from November 20.</li>
+        <li>Youâre looking for someone to do the work for you.</li>
+        <li>You donât work in the tree care industry.</li>
+        <li>You canât join a video call from November 20.</li>
       </ul>
     </div>
   </div>
@@ -403,7 +443,7 @@ a{color:inherit}
         <p class="p hl"><b>The most important part:</b> personal advice based on your current situation: your numbers, your crews, your market.</p>
         <ul class="chk">
           <li>Advice built around where your business is today</li>
-          <li>They’ve been in your exact situation</li>
+          <li>Theyâve been in your exact situation</li>
           <li>They look at your business and your market</li>
           <li>You leave with clear next steps</li>
         </ul>
@@ -420,13 +460,13 @@ a{color:inherit}
         <span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span>
       </div>
       <h2 class="h2">Sit Down With a 7-Figure Tree Service Owner</h2>
-      <p class="p">Entries close Thursday, November 12 at 5:00 PM ET. You’ll get a confirmation email right away, and the 4 winners are drawn live on November 13. Keep your phone close: you must answer to win.</p>
+      <p class="p">Entries close Thursday, November 12 at 5:00 PM ET. Youâll get a confirmation email right away, and the 4 winners are drawn live on November 13. Keep your phone close: you must answer to win.</p>
     </div>
     <div class="form-card" id="enter-2">
       <h2 class="h3">Enter to Win Your 1-on-1 Session</h2>
       <span class="steps">Takes about 2 minutes</span>
       <iframe src="https://api.leadconnectorhq.com/widget/form/b0UxqgFYANiVRYIZicAG" id="inline-b0UxqgFYANiVRYIZicAG-2" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="ATCP MasterClass Giveaway" data-layout-iframe-id="inline-b0UxqgFYANiVRYIZicAG-2" data-form-id="b0UxqgFYANiVRYIZicAG" title="ATCP MasterClass Giveaway entry form"></iframe>
-      <p class="micro reassure">Free to enter · No purchase necessary · We never sell your information</p>
+      <p class="micro reassure">Free to enter Â· No purchase necessary Â· We never sell your information</p>
       <p class="p closed-msg">Entries are closed. The 4 winners are drawn live on Fri, Nov 13 at 5:00 PM ET during our Discord town hall.</p>
       <div class="cd" data-cd><small>Sessions start in</small><b data-u="d">00</b><i>d</i><b data-u="h">00</b><i>h</i><b data-u="m">00</b><i>m</i><b data-u="s">00</b><i>s</i></div>
     </div>
@@ -448,8 +488,8 @@ a{color:inherit}
       <details><summary>Can I choose my coach?</summary><p class="a">Yes. Winners choose in draw order: the first winner drawn picks first, then the second, and so on.</p></details>
       <details><summary>When and how does the session happen?</summary><p class="a">Sessions start Friday, November 20, 2026. Each one is a 60-minute, one-on-one live video call.</p></details>
       <details><summary>Will the session be recorded?</summary><p class="a">Yes, every session is recorded.</p></details>
-      <details><summary>Do I need to join the Facebook group?</summary><p class="a">Yes. Joining is free, and the winners are drawn from group members. You’ll get the link right after you enter.</p></details>
-      <details><summary>How do bonus entries work?</summary><p class="a">Inside the group, use the “Invite Friends” button. Every person you invite who joins before November 12 at 5:00 PM ET gives you one extra entry. There is absolutely no limit on bonus entries.</p></details>
+      <details><summary>Do I need to join the Facebook group?</summary><p class="a">Yes. Joining is free, and the winners are drawn from group members. Youâll get the link right after you enter.</p></details>
+      <details><summary>How do bonus entries work?</summary><p class="a">Inside the group, use the âInvite Friendsâ button. Every person you invite who joins before November 12 at 5:00 PM ET gives you one extra entry. There is absolutely no limit on bonus entries.</p></details>
       <details><summary>Do I need to be an ATCP member?</summary><p class="a">No. Anyone in the tree care industry can enter.</p></details>
       <details><summary>What happens to my information?</summary><p class="a">We use it only to run this giveaway and to send you ATCP updates. We never sell it.</p></details>
     </div>
@@ -459,11 +499,11 @@ a{color:inherit}
 <!-- Legal footer -->
 <footer class="footer">
   <div class="wrap stack c">
-    <p class="links"><a href="#">Official Rules</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    <p class="links"><a href="#">Official Rules</a> Â· <a href="#">Privacy Policy</a> Â· <a href="#">Terms</a></p>
     <p>No purchase necessary. Open to tree care professionals; see the Official Rules for age and location requirements. Entries close November 12, 2026 at 5:00 PM ET. Four winners will be drawn on November 13, 2026. Approximate value: $1,000 per session.</p>
     <p>This site is not part of Facebook or Meta Platforms, Inc. and is not endorsed by Facebook in any way. This promotion is not sponsored, endorsed or administered by Facebook or Instagram.</p>
     <p>Sponsored by the Association of Tree Care Professionals (ATCP).</p>
-    <p>© 2026 Association of Tree Care Professionals (ATCP). All Rights Reserved.</p>
+    <p>Â© 2026 Association of Tree Care Professionals (ATCP). All Rights Reserved.</p>
   </div>
 </footer>
 
