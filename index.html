@@ -518,7 +518,9 @@ a{color:inherit}
 
 <!-- LeadConnector form embed (sizes the forms to their content) -->
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-<script>
+<script id="atcp-countdown">
+(function () {
+if (window.__atcpCd) return; window.__atcpCd = 1;
 /* Dates (UTC): entries close Thu Nov 12, 2026, 5:00 PM ET; countdowns tick to the session start, Fri Nov 20, 2026, 5:00 PM ET */
 const ENTRIES_CLOSE = Date.UTC(2026, 10, 12, 22, 0, 0);
 const SESSIONS_START = Date.UTC(2026, 10, 20, 22, 0, 0);
@@ -541,6 +543,10 @@ if (Date.now() >= ENTRIES_CLOSE) {
   });
   document.querySelector('.topbar p').innerHTML = '<b>Entries are closed.</b> The 4 winners are drawn live on Fri, Nov 13 at 5:00 PM ET during our Discord town hall.';
 }
+})();
 </script>
+
+<!-- Fallback: if a host inserts this page as HTML and does not run <script> tags (countdown stuck at 00), this tiny image re-runs the countdown script on load. -->
+<img alt="" aria-hidden="true" width="1" height="1" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="var o=document.getElementById('atcp-countdown');if(o&&!window.__atcpCd){var n=document.createElement('script');n.text=o.text;document.body.appendChild(n)}">
 </body>
 </html>
