@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATCP Tree Care MasterClass Giveaway</title>
+<meta name="description" content="Win 1-on-1 coaching with a 7-figure tree service owner. 4 winners, 4 coaches, free to enter.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --green:#2d5746;--green-deep:#294e3f;--wash:#eaeeed;
+  --gold:#caa846;--gold-light:#ebc967;--gold-grad:linear-gradient(121.11deg,#ebc967 7.21%,#caa846 80.17%);
+  --charcoal:#333;--ink:#212529;--night:#202022;--mute:#5e625f;--line:#dee2e6;
+  --hero-grad:radial-gradient(106.85% 377.56% at -0.29% 93.73%,#333 0px,#2d5746 20%,#333 54.75%,#202022 100%);
+  --font:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--charcoal);font:16px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+a{color:inherit}
+.wrap{max-width:1140px;margin-inline:auto;padding-inline:16px}
+.c{text-align:center}
+.stack{display:flex;flex-direction:column;gap:16px;min-width:0}
+.c.stack{align-items:center}
+
+/* type */
+.h1{font-size:clamp(34px,4.4vw,50px);line-height:1.2;font-weight:700;text-wrap:balance}
+.h2{font-size:clamp(26px,3.6vw,44px);line-height:1.2;font-weight:600;text-wrap:balance}
+.h3{font-size:clamp(19px,2vw,24px);line-height:1.25;font-weight:500}
+.eb{font-size:clamp(18px,1.9vw,22px);line-height:1.5;font-weight:600}
+.p{font-size:clamp(16px,1.5vw,18px);line-height:1.55;text-wrap:pretty}
+.micro{font-size:14px;line-height:1.45;color:var(--mute)}
+.c .p{max-width:62ch}
+.pill{display:inline-block;align-self:flex-start;padding:2px 12px;border-radius:12px;background:var(--gold-grad);color:var(--charcoal);font-size:clamp(14px,1.5vw,16px);line-height:1.6;font-weight:600;text-transform:uppercase}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px;border:0;border-radius:12px;background:var(--gold-grad);color:var(--charcoal);font:700 16px/24px var(--font);text-decoration:none;text-align:center;cursor:pointer;transition:opacity .3s}
+.btn:hover{opacity:.8}
+.btn:focus-visible,summary:focus-visible{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--charcoal)}
+.btn.big{font-size:17px;padding:14px 28px}
+.btn.sm{font-size:14px;padding:6px 14px}
+
+/* countdown */
+.cd{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 6px;font-variant-numeric:tabular-nums}
+.cd small{font-size:12px;letter-spacing:.04em;text-transform:uppercase;margin-right:6px;opacity:.85}
+.cd b{font:600 22px var(--font);min-width:1.4em;text-align:right}
+.cd i{font-style:normal;font-size:12px;opacity:.75}
+.cta{display:flex;flex-direction:column;align-items:center;gap:14px}
+
+/* section bands */
+.band{position:relative;padding:clamp(40px,5vw,64px) 0;background-repeat:no-repeat}
+.band.white-l{background-image:url(assets/patterns/section-top-left-gray.svg);background-position:left top}
+.band.white-r{background-image:url(assets/patterns/section-top-right-gray.svg);background-position:right top}
+.band.green{background-color:var(--green);background-image:url(assets/patterns/section-bottom-left-green.svg);background-position:left bottom;color:#fff}
+.band.green .micro{color:rgba(255,255,255,.82)}
+.gap{height:clamp(24px,3vw,36px)}
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center}
+.split.top{align-items:start}
+.card{display:flex;flex-direction:column;gap:14px;padding:clamp(20px,2.4vw,28px);border-radius:12px;background:#fff;color:var(--charcoal)}
+.band .card .micro,.card .micro{color:var(--mute)}
+
+/* checklists */
+.chk{display:flex;flex-direction:column;gap:10px}
+.chk li{position:relative;padding-left:30px;font-size:16px;line-height:1.45}
+.chk li::before{content:"✓";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;background:var(--charcoal);color:#fff}
+.chk.x li::before{content:"✕";background:transparent;color:currentColor;box-shadow:inset 0 0 0 1.5px currentColor;opacity:.75}
+
+/* top bar */
+.topbar{background:var(--green);color:#fff;padding:8px 0}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+.topbar p{font-size:14px;flex:1;min-width:220px}
+.topbar .cd b{font-size:18px}
+
+/* hero */
+.hero{background:#3a403c url(assets/hero-desktop.webp) 79% 30%/auto 125% no-repeat;padding:clamp(160px,24vw,290px) 0 clamp(40px,5vw,64px)}
+.hero .split{align-items:start}
+.hero-card{display:flex;flex-direction:column;gap:18px;padding:clamp(22px,3vw,32px);border-radius:12px;color:#fff;background:url(assets/patterns/section-left-green-dark.svg) left center no-repeat,var(--hero-grad)}
+.logo-plate{align-self:flex-start;background:#fff;border-radius:12px;padding:8px 14px}
+.logo-plate img{height:clamp(40px,4.4vw,52px);width:auto}
+.coachrow{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px}
+.faces{display:flex}
+.face{position:relative;overflow:hidden;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35)}
+.face svg{position:absolute;left:12%;bottom:-6%;width:76%;fill:rgba(255,255,255,.5)}
+.faces .face{width:36px;height:36px;border-radius:50%}
+.faces .face + .face{margin-left:-8px}
+.coachrow .micro{flex:1;min-width:180px;color:rgba(255,255,255,.85)}
+.logi{display:grid;grid-template-columns:repeat(2,max-content);gap:10px 30px}
+.logi small{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;opacity:.8}
+.logi span{font-weight:600;font-size:15px}
+.form-card{display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.6vw,28px);border-radius:12px;background:#fff;color:var(--charcoal);border:1px solid var(--line);box-shadow:0 2px 4px rgba(0,0,0,.1);scroll-margin-top:24px}
+.form-card .steps{font-size:13px;color:var(--mute)}
+.form-card iframe{display:block;width:100%;min-height:520px;border:0;border-radius:3px}
+.form-card .closed-msg{display:none}
+
+/* numbers */
+.stat{display:flex;flex-direction:column;gap:6px}
+.stat b{font:600 clamp(32px,4vw,48px)/1 var(--font)}
+.stat span{font-size:15px;text-transform:uppercase;opacity:.85}
+
+/* prize */
+.prize{display:flex;flex-direction:column;gap:14px;padding:clamp(20px,2.6vw,28px);border:2px dashed var(--green);border-radius:12px;background:var(--wash)}
+.prize-head{font-size:clamp(17px,1.8vw,20px);line-height:1.3;font-weight:700}
+.prize-head span{white-space:nowrap}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:10px;border-top:1px solid #c3cbc7}
+.price.value{font-size:16px;font-weight:600}
+.price.value b{font-size:clamp(19px,2.2vw,22px)}
+.price.cost{font-size:clamp(18px,2vw,22px);font-weight:700;color:var(--green)}
+.price.cost b{font-size:clamp(28px,3.4vw,36px)}
+
+/* coaches */
+.coach{padding:0;overflow:hidden;gap:0}
+.coach .photo{aspect-ratio:4/5;border:0;background:#d5dcd8}
+.coach .photo svg{fill:#a9b5ae}
+.coach .meta{display:flex;flex-direction:column;gap:10px;padding:18px}
+.spec{display:flex;align-items:center;min-height:calc(2.6em + 8px);padding:4px 10px;border-radius:12px;background:var(--green);color:#fff;font-size:12px;line-height:1.3;font-weight:700;text-transform:uppercase}
+
+/* steps */
+.step{display:flex;flex-direction:column;gap:10px}
+.step .n{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font:700 18px var(--font)}
+.draw{background:var(--wash);border-radius:12px;padding:clamp(20px,2.6vw,28px);display:flex;flex-direction:column;gap:14px}
+.alert{font-weight:700;text-transform:uppercase;border-left:4px solid var(--gold);padding-left:12px}
+
+/* topic icons */
+.ico{width:48px;height:48px;border-radius:12px;background:var(--green);color:var(--gold-light);display:grid;place-items:center;flex:none}
+.ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* for you / not for you */
+.yes{background:#e3f1e8;border:1px solid #b9dbc6}
+.no{background:#fbe8e6;border:1px solid #f0c3bd}
+.yes .h3{color:#1b5e3a}.no .h3{color:#8e2a20}
+.yes .chk li,.no .chk li{padding-left:38px;min-height:26px}
+.yes .chk li::before,.no .chk li::before{width:26px;height:26px;top:-1px;font-size:15px;color:#fff;box-shadow:none;opacity:1}
+.yes .chk li::before{background:#1f7a4a}
+.no .chk li::before{background:#c0392b}
+
+/* comparison */
+.night{background:var(--night) url(assets/patterns/section-top-right-dark.svg) right top no-repeat;color:#fff}
+.hl{background:#fbf3dc;border-left:4px solid var(--gold);padding:10px 14px;border-radius:0 8px 8px 0}
+
+/* closing */
+.closing{background:#3a403c url(assets/closing-bg.webp) 35% 40%/cover no-repeat}
+.closing .hero-card .grid{gap:12px}
+.closing .face{aspect-ratio:4/5;border-radius:10px}
+
+/* faq */
+.faq details{border:1px solid var(--line);border-top:0;background:#fff;color:var(--ink)}
+.faq details:first-child{border-top:1px solid var(--line);border-radius:12px 12px 0 0}
+.faq details:last-child{border-radius:0 0 12px 12px}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;font-weight:700;font-size:16px;line-height:1.3;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:14px;height:14px;flex:none;transition:transform .2s ease-in-out;background:no-repeat center/14px url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e")}
+.faq details[open] summary{background:var(--wash);color:var(--green-deep)}
+.faq details:first-child[open] summary{border-radius:11px 11px 0 0}
+.faq details[open] summary::after{transform:rotate(-180deg)}
+.faq .a{padding:14px 20px 18px;font-size:16px;line-height:1.55}
+
+/* footer */
+.footer{color:#fff;padding:clamp(36px,4vw,48px) 0;background-color:var(--green);background-image:url(assets/patterns/footer-top-left.svg),url(assets/patterns/footer-bottom-right.svg),linear-gradient(72.71deg,#2d5746 -0.83%,#2b7355 56.61%);background-position:left top,right bottom,center;background-repeat:no-repeat;background-size:auto,auto,cover}
+.footer p{font-size:12px;line-height:1.5;max-width:900px;margin-inline:auto}
+.footer .links a{color:#fff;font-weight:700;text-decoration:none}
+.footer .links a:hover{text-decoration:underline}
+
+/* mobile sticky bar */
+.mbar{display:none}
+
+/* after entries close */
+.is-closed .form-card iframe,.is-closed .form-card .steps,.is-closed .form-card .reassure{display:none}
+.is-closed .form-card .closed-msg{display:block}
+
+@media (max-width:900px){
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:767px){
+  .split,.g2,.g3{grid-template-columns:minmax(0,1fr)}
+  .hero{background-image:url(assets/hero-mobile.webp);background-size:100% auto;background-position:center -40px;background-color:#2f3431;padding-top:min(80vw,330px)}
+  .closing .split > :first-child{order:2}
+  .topbar .only-d{display:none}
+  .logi{grid-template-columns:1fr}
+  .coach{flex-direction:row}
+  .coach .photo{width:38%;flex:none;aspect-ratio:auto}
+  .coach .meta{padding:14px}
+  .btn.big{width:100%}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;align-items:center;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -2px 8px rgba(0,0,0,.08)}
+  .mbar .btn{flex:1}
+  .mbar .cd{flex:none;gap:0 3px;color:var(--charcoal)}
+  .mbar .cd b{font-size:15px;min-width:0}
+  body{padding-bottom:72px}
+}
+@media (max-width:420px){
+  .g4.topics{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:340px){
+  .prize-head span{display:block}.prize-head .sep{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sil" viewBox="0 0 100 100"><circle cx="50" cy="36" r="19"/><path d="M12 100c0-24 17-38 38-38s38 14 38 38z"/></symbol>
+</svg>
+
+<!-- Deadline bar -->
+<div class="topbar">
+  <div class="wrap">
+    <p><b>Free Giveaway:</b> Win 1 of 4 coaching sessions with 7-figure tree service owners</p>
+    <div class="cd" data-cd><small>Sessions start in</small><b data-u="d">00</b><i>d</i><b data-u="h">00</b><i>h</i><b data-u="m">00</b><i>m</i><b data-u="s">00</b><i>s</i></div>
+    <a class="btn sm only-d" href="#enter" data-cta>Enter the Giveaway</a>
+  </div>
+</div>
+
+<!-- Hero + entry form -->
+<section class="hero">
+  <div class="wrap split">
+    <div class="hero-card">
+      <div class="logo-plate"><img src="assets/atcp-logo.webp" alt="ATCP: Association of Tree Care Professionals" width="188" height="95"></div>
+      <span class="pill">ATCP Tree Care MasterClass · Free Giveaway</span>
+      <h1 class="h1">Win 1-on-1 Coaching With a 7-Figure Tree Service Owner</h1>
+      <p class="p">Learn directly from the people who have already built the business you’re trying to build. No generic advice. No guessing. Four winners, a $1,000 session each, and $0 to enter.</p>
+      <div class="coachrow">
+        <div class="faces" aria-hidden="true">
+          <span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span>
+        </div>
+        <p class="micro">Coached by Joe Withledge, Stefano LeBlanc, Chad Hansen and Alex Shy</p>
+      </div>
+      <div class="logi">
+        <div><small>Entries close</small><span>Thu, Nov 12 · 5:00 PM ET</span></div>
+        <div><small>Winners drawn</small><span>Fri, Nov 13 · 5:00 PM ET</span></div>
+        <div><small>Session</small><span>60-min 1-on-1 video call</span></div>
+      </div>
+    </div>
+    <div class="form-card" id="enter">
+      <h2 class="h3">Enter to Win Your 1-on-1 Session</h2>
+      <span class="steps">Takes about 2 minutes</span>
+      <iframe src="https://api.leadconnectorhq.com/widget/form/b0UxqgFYANiVRYIZicAG" id="inline-b0UxqgFYANiVRYIZicAG" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="ATCP MasterClass Giveaway" data-layout-iframe-id="inline-b0UxqgFYANiVRYIZicAG" data-form-id="b0UxqgFYANiVRYIZicAG" title="ATCP MasterClass Giveaway entry form"></iframe>
+      <p class="micro reassure">Free to enter · No purchase necessary · We never sell your information</p>
+      <p class="p closed-msg">Entries are closed. The 4 winners are drawn live on Fri, Nov 13 at 5:00 PM ET during our Discord town hall.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Numbers strip -->
+<section class="band green">
+  <div class="wrap grid g4">
+    <div class="stat"><b>4</b><span>Winners</span></div>
+    <div class="stat"><b>60 min</b><span>1-on-1 sessions</span></div>
+    <div class="stat"><b>4</b><span>7-figure coaches</span></div>
+    <div class="stat"><b>$0</b><span>To enter</span></div>
+  </div>
+</section>
+
+<!-- What you can win -->
+<section class="band white-l">
+  <div class="wrap split">
+    <div class="stack">
+      <p class="eb">What You Can Win</p>
+      <h2 class="h2">A Private 60-Minute Session Built Around Your Business</h2>
+      <p class="p">Each of the 4 winners gets their own coach: a tree service owner who has built and run a 7-figure business. The first winner drawn picks their coach first, then the second, and so on.</p>
+      <p class="p">Bring the question that matters most to you, from growth and sales to operations, leadership, hiring and profitability.</p>
+    </div>
+    <div class="prize">
+      <p class="prize-head"><span>4 Winners</span><span class="sep"> · </span><span>4 Coaches</span></p>
+      <h3 class="h3">1-on-1 Tree Care MasterClass Session</h3>
+      <ul class="chk">
+        <li><b>Length:</b> 60 minutes, one-on-one</li>
+        <li><b>Format:</b> live video call</li>
+        <li><b>Your coach:</b> you choose, in draw order</li>
+        <li><b>Focus:</b> your own business question</li>
+        <li><b>You leave with:</b> clear action steps (bring a notebook)</li>
+        <li><b>Recorded:</b> every session is recorded</li>
+      </ul>
+      <div class="price cost"><span>Cost to enter</span><b>$0</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet the coaches -->
+<section class="band green">
+  <div class="wrap">
+    <div class="stack c">
+      <p class="eb">Your Coaches</p>
+      <h2 class="h2">Meet ATCP’s Top Board Members and Experts</h2>
+      <p class="p">Each one has built and operated a 7-figure tree service business. Now one of them could be in your corner.</p>
+    </div>
+    <div class="gap"></div>
+    <div class="grid g4">
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Storm Response</span><h3 class="h3">Joe Withledge</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Storm response · Emergency work · Scaling</p></div></div>
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Storm Work &amp; Insurance Billing</span><h3 class="h3">Stefano LeBlanc</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Insurance billing · Storm work · Getting paid</p></div></div>
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">Business Management &amp; Finance</span><h3 class="h3">Chad Hansen</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Pricing · Cash flow · Managing the business</p></div></div>
+      <div class="card coach"><div class="face photo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></div><div class="meta"><span class="spec">PHC &amp; Operational Efficiency</span><h3 class="h3">Alex Shy</h3><p class="micro">7-figure tree service owner</p><p class="micro"><b>Ask me about:</b> Plant health care · Systems · Crew efficiency</p></div></div>
+    </div>
+    <div class="gap"></div>
+    <div class="cta">
+      <a class="btn big" href="#enter" data-cta>Enter the Giveaway</a>
+      <div class="cd" data-cd><small>Sessions start in</small><b data-u="d">00</b><i>d</i><b data-u="h">00</b><i>h</i><b data-u="m">00</b><i>m</i><b data-u="s">00</b><i>s</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="band white-r">
+  <div class="wrap">
+    <div class="stack c">
+      <p class="eb">How It Works</p>
+      <h2 class="h2">3 Simple Steps to Your 1-on-1 Session</h2>
+    </div>
+    <div class="gap"></div>
+    <div class="grid g3">
+      <div class="step"><span class="n">1</span><h3 class="h3">Enter in 2 Minutes</h3><p class="p">Fill in the form, tell us what you want help with, then join the free ATCP Facebook group (required to win).</p></div>
+      <div class="step"><span class="n">2</span><h3 class="h3">The Live Draw on Nov 13</h3><p class="p">The 4 winners are drawn live on stream during our Discord town hall on Friday, November 13 at 5:00 PM ET.</p></div>
+      <div class="step"><span class="n">3</span><h3 class="h3">Pick Your Coach and Meet</h3><p class="p">Winners choose their coach in draw order. Sessions start Friday, November 20 on a live video call.</p></div>
+    </div>
+    <div class="gap"></div>
+    <div class="draw">
+      <h3 class="h3">The Live Draw</h3>
+      <p class="p">The 4 winners will be drawn live on stream during our Discord town hall taking place Friday, November 13 at 5:00 PM ET.</p>
+      <p class="p alert">You Must Answer Your Phone to Win</p>
+      <ul class="chk">
+        <li>We will call each drawn entrant live on stream at the phone number provided on their entry.</li>
+        <li>We will make up to three call attempts within 10 minutes.</li>
+        <li>Each attempt will ring until voicemail.</li>
+        <li>You must answer the call live; a voicemail or a text back does NOT count.</li>
+        <li>If there is no answer after the third attempt, that entrant forfeits, and we will draw the next name live on the spot.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Topics -->
+<section class="band green">
+  <div class="wrap">
+    <div class="stack c">
+      <p class="eb">Bring Your Toughest Question</p>
+      <h2 class="h2">What Would You Ask a 7-Figure Owner?</h2>
+    </div>
+    <div class="gap"></div>
+    <div class="grid g4 topics">
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 16.5a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9a3.75 3.75 0 0 1 .5 7.47"/><path d="M13 11.5l-3 5h4l-3 5"/></svg></span><h3 class="h3">Storm &amp; Emergency Response</h3><p class="p">Win more storm work and run emergency jobs safely and profitably.</p><p class="micro"><b>Coach:</b> Joe Withledge, Stefano LeBlanc</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M14.5 9.6c-.4-.9-1.4-1.5-2.5-1.5-1.4 0-2.5.8-2.5 1.9 0 2.6 5 1.4 5 4.1 0 1.1-1.1 2-2.5 2-1.2 0-2.2-.6-2.6-1.5M12 6.9v1.2m0 8v1.2"/></svg></span><h3 class="h3">Insurance Billing</h3><p class="p">Get paid faster on insurance jobs and stop leaving money on the table.</p><p class="micro"><b>Coach:</b> Stefano LeBlanc</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6.5 16.5v-4M10.5 16.5V9.5M14.5 16.5v-6M18.5 16.5V6"/></svg></span><h3 class="h3">Business Management &amp; Finance</h3><p class="p">Price for profit, manage cash flow and know your numbers.</p><p class="micro"><b>Coach:</b> Chad Hansen</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19c3-4 6-7 10-9"/></svg></span><h3 class="h3">PHC &amp; Operational Efficiency</h3><p class="p">Add plant health care services and run your crews with less waste.</p><p class="micro"><b>Coach:</b> Alex Shy</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><h3 class="h3">Scaling a Tree Care Business</h3><p class="p">Grow from one crew to several without losing control.</p><p class="micro"><b>Coach:</b> All 4 coaches</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 10h4v4h-4z"/><path d="M9.5 3v3M14.5 3v3M9.5 18v3M14.5 18v3M3 9.5h3M3 14.5h3M18 9.5h3M18 14.5h3"/></svg></span><h3 class="h3">AI &amp; Automation</h3><p class="p">Save hours on quotes, scheduling and follow-ups.</p><p class="micro"><b>Coach:</b> All 4 coaches</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 19c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 13.2c2.6.4 4.5 2.7 4.5 5.8"/></svg></span><h3 class="h3">Managing People &amp; Building a Team</h3><p class="p">Hire, train and keep the right people.</p><p class="micro"><b>Coach:</b> All 4 coaches</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9a2 2 0 1 1 3 1.7c-.6.4-1 .8-1 1.5M12 14.2v.1"/></svg></span><h3 class="h3">Your Own Question</h3><p class="p">Bring the challenge that keeps you up at night and work through it together.</p><p class="micro"><b>Coach:</b> Any coach</p></div>
+    </div>
+    <div class="gap"></div>
+    <div class="cta"><a class="btn big" href="#enter" data-cta>Enter the Giveaway</a></div>
+  </div>
+</section>
+
+<!-- For you / not for you -->
+<section class="band white-l">
+  <div class="wrap grid g2">
+    <div class="card yes">
+      <h3 class="h3">This Is for You If…</h3>
+      <ul class="chk">
+        <li>You work in tree care: owner, employee, contractor, climber or crew lead.</li>
+        <li>You want to grow a tree business, or start your own.</li>
+        <li>You want answers from someone who has done it, not theory.</li>
+        <li>You can join a 60-minute video call from November 20.</li>
+      </ul>
+    </div>
+    <div class="card no">
+      <h3 class="h3">This Is Not for You If…</h3>
+      <ul class="chk x">
+        <li>You’re looking for someone to do the work for you.</li>
+        <li>You don’t work in the tree care industry.</li>
+        <li>You can’t join a video call from November 20.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Why learn from owners -->
+<section class="band green">
+  <div class="wrap">
+    <div class="stack c"><h2 class="h2">Why Advice From an Owner Beats Videos and Forums</h2></div>
+    <div class="gap"></div>
+    <div class="grid g2">
+      <div class="card night">
+        <h3 class="h3">The Usual Way</h3>
+        <ul class="chk x">
+          <li>Videos and forums made for everyone</li>
+          <li>Consultants who never ran a crew</li>
+          <li>Tips that may not fit your market</li>
+          <li>You guess what applies to you</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="h3">1-on-1 With a 7-Figure Owner</h3>
+        <p class="p hl"><b>The most important part:</b> personal advice based on your current situation: your numbers, your crews, your market.</p>
+        <ul class="chk">
+          <li>Advice built around where your business is today</li>
+          <li>They’ve been in your exact situation</li>
+          <li>They look at your business and your market</li>
+          <li>You leave with clear next steps</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Closing + form -->
+<section class="band closing">
+  <div class="wrap split">
+    <div class="hero-card">
+      <div class="grid g4" aria-hidden="true">
+        <span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span><span class="face"><svg viewBox="0 0 100 100"><use href="#sil"/></svg></span>
+      </div>
+      <h2 class="h2">Sit Down With a 7-Figure Tree Service Owner</h2>
+      <p class="p">Entries close Thursday, November 12 at 5:00 PM ET. You’ll get a confirmation email right away, and the 4 winners are drawn live on November 13. Keep your phone close: you must answer to win.</p>
+    </div>
+    <div class="form-card" id="enter-2">
+      <h2 class="h3">Enter to Win Your 1-on-1 Session</h2>
+      <span class="steps">Takes about 2 minutes</span>
+      <iframe src="https://api.leadconnectorhq.com/widget/form/b0UxqgFYANiVRYIZicAG" id="inline-b0UxqgFYANiVRYIZicAG-2" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="ATCP MasterClass Giveaway" data-layout-iframe-id="inline-b0UxqgFYANiVRYIZicAG-2" data-form-id="b0UxqgFYANiVRYIZicAG" title="ATCP MasterClass Giveaway entry form"></iframe>
+      <p class="micro reassure">Free to enter · No purchase necessary · We never sell your information</p>
+      <p class="p closed-msg">Entries are closed. The 4 winners are drawn live on Fri, Nov 13 at 5:00 PM ET during our Discord town hall.</p>
+      <div class="cd" data-cd><small>Sessions start in</small><b data-u="d">00</b><i>d</i><b data-u="h">00</b><i>h</i><b data-u="m">00</b><i>m</i><b data-u="s">00</b><i>s</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="band white-r">
+  <div class="wrap split top">
+    <div class="stack">
+      <p class="eb">FAQ</p>
+      <h2 class="h2">Questions? We Have Answers.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Is it really free?</summary><p class="a">Yes. Entering costs nothing and no purchase is necessary.</p></details>
+      <details><summary>Who can enter?</summary><p class="a">Anyone who works in the tree care industry: business owners, employees, contractors, climbers and other tree care professionals. See the Official Rules for age and location requirements.</p></details>
+      <details><summary>How are the winners chosen?</summary><p class="a">The 4 winners are drawn at random, live on stream during our Discord town hall on Friday, November 13, 2026 at 5:00 PM ET. We call each winner live at the phone number on their entry, up to three times within 10 minutes. You must answer the call live to win; a voicemail or a text back does not count.</p></details>
+      <details><summary>How many winners will there be?</summary><p class="a">Four. Each winner gets their own coach and their own 60-minute session.</p></details>
+      <details><summary>Can I choose my coach?</summary><p class="a">Yes. Winners choose in draw order: the first winner drawn picks first, then the second, and so on.</p></details>
+      <details><summary>When and how does the session happen?</summary><p class="a">Sessions start Friday, November 20, 2026. Each one is a 60-minute, one-on-one live video call.</p></details>
+      <details><summary>Will the session be recorded?</summary><p class="a">Yes, every session is recorded.</p></details>
+      <details><summary>Do I need to join the Facebook group?</summary><p class="a">Yes. Joining is free, and the winners are drawn from group members. You’ll get the link right after you enter.</p></details>
+      <details><summary>How do bonus entries work?</summary><p class="a">Inside the group, use the “Invite Friends” button. Every person you invite who joins before November 12 at 5:00 PM ET gives you one extra entry. There is absolutely no limit on bonus entries.</p></details>
+      <details><summary>Do I need to be an ATCP member?</summary><p class="a">No. Anyone in the tree care industry can enter.</p></details>
+      <details><summary>What happens to my information?</summary><p class="a">We use it only to run this giveaway and to send you ATCP updates. We never sell it.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Legal footer -->
+<footer class="footer">
+  <div class="wrap stack c">
+    <p class="links"><a href="#">Official Rules</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    <p>No purchase necessary. Open to tree care professionals; see the Official Rules for age and location requirements. Entries close November 12, 2026 at 5:00 PM ET. Four winners will be drawn on November 13, 2026. Approximate value: $1,000 per session.</p>
+    <p>This site is not part of Facebook or Meta Platforms, Inc. and is not endorsed by Facebook in any way. This promotion is not sponsored, endorsed or administered by Facebook or Instagram.</p>
+    <p>Sponsored by the Association of Tree Care Professionals (ATCP).</p>
+    <p>© 2026 Association of Tree Care Professionals (ATCP). All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Mobile: button stuck to the bottom of the screen -->
+<div class="mbar">
+  <a class="btn" href="#enter" data-cta>Enter the Giveaway</a>
+  <div class="cd" data-cd><b data-u="d">00</b><i>d</i><b data-u="h">00</b><i>h</i><b data-u="m">00</b><i>m</i><b data-u="s">00</b><i>s</i></div>
+</div>
+
+<!-- LeadConnector form embed (sizes the forms to their content) -->
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+/* Dates (UTC): entries close Thu Nov 12, 2026, 5:00 PM ET; countdowns tick to the session start, Fri Nov 20, 2026, 5:00 PM ET */
+const ENTRIES_CLOSE = Date.UTC(2026, 10, 12, 22, 0, 0);
+const SESSIONS_START = Date.UTC(2026, 10, 20, 22, 0, 0);
+const GROUP_URL = 'https://www.facebook.com/groups/atcpros/';
+
+const pad = n => String(n).padStart(2, '0');
+function tick() {
+  const s = Math.max(0, Math.floor((SESSIONS_START - Date.now()) / 1000));
+  const v = { d: Math.floor(s / 86400), h: Math.floor(s % 86400 / 3600), m: Math.floor(s % 3600 / 60), s: s % 60 };
+  document.querySelectorAll('[data-cd] b[data-u]').forEach(b => b.textContent = pad(v[b.dataset.u]));
+}
+tick(); setInterval(tick, 1000);
+
+/* After entries close: forms disappear and every button sends people to the Facebook group */
+if (Date.now() >= ENTRIES_CLOSE) {
+  document.body.classList.add('is-closed');
+  document.querySelectorAll('[data-cta]').forEach(a => {
+    a.textContent = 'Entries Closed, Join the Facebook Group Now';
+    a.href = GROUP_URL; a.target = '_blank'; a.rel = 'noopener';
+  });
+  document.querySelector('.topbar p').innerHTML = '<b>Entries are closed.</b> The 4 winners are drawn live on Fri, Nov 13 at 5:00 PM ET during our Discord town hall.';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>You’re Almost Done · ATCP Giveaway</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --green:#2d5746;--gold:#caa846;--gold-light:#ebc967;--gold-grad:linear-gradient(121.11deg,#ebc967 7.21%,#caa846 80.17%);
+  --charcoal:#333;--font:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --hero-grad:radial-gradient(106.85% 377.56% at -0.29% 93.73%,#333 0px,#2d5746 20%,#333 54.75%,#202022 100%);
+}
+*{box-sizing:border-box}
+body{margin:0;background:#202022;color:#fff;font:16px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:880px;margin-inline:auto;padding-inline:16px}
+
+.hero{background:var(--hero-grad);padding:clamp(36px,5vw,64px) 0}
+.hero .wrap{display:flex;flex-direction:column;gap:clamp(24px,3.4vw,36px)}
+.intro{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.logo-plate{background:#fff;border-radius:12px;padding:8px 14px}
+.logo-plate img{height:clamp(40px,4.4vw,52px);width:auto}
+.pill{display:inline-block;padding:2px 12px;border-radius:12px;background:var(--gold-grad);color:var(--charcoal);font-size:clamp(14px,1.5vw,16px);line-height:1.6;font-weight:600;text-transform:uppercase}
+.h1{font-size:clamp(34px,4.4vw,50px);line-height:1.2;font-weight:700}
+.h3{font-size:clamp(19px,2vw,24px);line-height:1.25;font-weight:500}
+.p{font-size:clamp(16px,1.5vw,18px);line-height:1.55;text-wrap:pretty}
+.intro .p{max-width:62ch}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:12px;background:var(--gold-grad);color:var(--charcoal);font:700 15px/24px var(--font);text-decoration:none;text-align:center;transition:opacity .3s}
+.btn:hover{opacity:.8}
+.btn:focus-visible{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--charcoal)}
+.btn.big{font-size:17px;padding:14px 28px}
+
+.steps{display:flex;flex-direction:column;gap:14px}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;padding:clamp(16px,2.2vw,24px);border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16)}
+.step.main{background:rgba(255,255,255,.11);border:2px solid var(--gold)}
+.num{display:flex;flex-direction:column;align-items:center;gap:8px}
+.num .n{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--gold-light);color:var(--charcoal);font:700 18px var(--font)}
+.ico{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.1);color:var(--gold-light);display:grid;place-items:center}
+.ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.body{display:flex;flex-direction:column;gap:8px;min-width:0}
+.tag{align-self:flex-start;background:#fbf3dc;color:#7a5f15;border-radius:12px;padding:2px 10px;font:700 12px/1.6 var(--font);text-transform:uppercase}
+.act{display:flex;flex-direction:column;align-items:center;gap:8px}
+.note{font-size:13px;color:rgba(255,255,255,.75)}
+
+.footer{padding:clamp(36px,4vw,48px) 0;text-align:center;background-color:var(--green);background-image:url(assets/patterns/footer-top-left.svg),url(assets/patterns/footer-bottom-right.svg),linear-gradient(72.71deg,#2d5746 -0.83%,#2b7355 56.61%);background-position:left top,right bottom,center;background-repeat:no-repeat;background-size:auto,auto,cover}
+.footer .wrap{max-width:1140px;display:flex;flex-direction:column;gap:16px}
+.footer p{font-size:12px;line-height:1.5;max-width:900px;margin-inline:auto}
+.footer a{color:#fff;font-weight:700;text-decoration:none}
+
+@media (max-width:767px){
+  .step{grid-template-columns:minmax(0,1fr);gap:14px}
+  .num{flex-direction:row}
+  .act,.act .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="intro">
+      <div class="logo-plate"><img src="assets/atcp-logo.webp" alt="ATCP: Association of Tree Care Professionals" width="188" height="95"></div>
+      <span class="pill">Entry Received · 1 Step Left</span>
+      <h1 class="h1">You’re Almost Done</h1>
+      <p class="p">Your entry is saved. The last step to guarantee your seat in the draw: the ATCP Facebook group. That’s where we go live, call out the winners and share every update. If you’re not in the group, there’s no way to know you’ve won.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step main">
+        <div class="num"><span class="n">1</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 19c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 13.2c2.6.4 4.5 2.7 4.5 5.8"/></svg></span></div>
+        <div class="body"><span class="tag">Required to win</span><h2 class="h3">Join the ATCP Facebook Group</h2><p class="p">The 4 winners are drawn from group members, live on Friday, November 13 at 5:00 PM ET. Keep your phone close: we call each winner live, and you must answer to win.</p></div>
+        <div class="act"><a class="btn big" data-fb href="https://www.facebook.com/groups/atcpros/" target="_blank" rel="noopener">Join the ATCP Facebook Group</a></div>
+      </div>
+
+      <div class="step">
+        <div class="num"><span class="n">2</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="3.5"/><path d="M3 20c0-3.9 3.1-7 7-7 1.5 0 2.9.5 4 1.3"/><path d="M18 14v6M15 17h6"/></svg></span></div>
+        <div class="body"><span class="tag">No limit</span><h2 class="h3">Get 1 Extra Entry for Every Friend Who Joins</h2><p class="p">Tap “Invite Friends” inside the group. Every friend who joins before Thursday, November 12 at 5:00 PM ET gives you one extra entry.</p></div>
+        <div class="act"><a class="btn" data-fb href="https://www.facebook.com/groups/atcpros/" target="_blank" rel="noopener">Invite Friends in the Group</a></div>
+      </div>
+
+      <div class="step">
+        <div class="num"><span class="n">3</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span></div>
+        <div class="body"><span class="tag">Stay Informed</span><h2 class="h3">Get ATCP News in Your Inbox</h2><p class="p">New regulations, safety standards and industry updates can affect your business. We’ll send timely, credible news to the email you entered: safety alerts and compliance updates, advocacy news, and policy changes that impact arboriculture.</p></div>
+        <div class="act">
+          <a class="btn" href="https://atcpros.org/news-releases/" target="_blank" rel="noopener">Read the Latest News</a>
+          <span class="note">Unsubscribe anytime.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><a href="#">Official Rules</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    <p>No purchase necessary. Open to tree care professionals; see the Official Rules for age and location requirements. Entries close November 12, 2026 at 5:00 PM ET. Four winners will be drawn on November 13, 2026. Approximate value: $1,000 per session.</p>
+    <p>This site is not part of Facebook or Meta Platforms, Inc. and is not endorsed by Facebook in any way. This promotion is not sponsored, endorsed or administered by Facebook or Instagram.</p>
+    <p>Sponsored by the Association of Tree Care Professionals (ATCP).</p>
+    <p>© 2026 Association of Tree Care Professionals (ATCP). All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* "Join" buttons: open the group in the Facebook app instead of a browser where people may not be signed in.
+   Facebook's own browser, iPhone (a tap on the facebook.com link opens the app) and computers keep the normal link. */
+(function () {
+  const ua = navigator.userAgent || '';
+  if (/FBAN|FBAV|FB_IAB|Instagram/i.test(ua) || !/Android/i.test(ua)) return;
+  const url = 'https://www.facebook.com/groups/atcpros/';
+  const app = 'intent://' + url.replace(/^https?:\/\//, '') + '#Intent;scheme=https;package=com.facebook.katana;S.browser_fallback_url=' + encodeURIComponent(url) + ';end';
+  document.querySelectorAll('a[data-fb]').forEach(a => { a.href = app; a.removeAttribute('target'); });
+})();
+</script>
+</body>
+</html>
